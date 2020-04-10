@@ -9,4 +9,4 @@ If you have any questions, comments, and/or suggestions, please do not hesistate
 
   Uit het Broek, Michiel A. J., Albert H. Schrotenboer, Bolor Jargalsaikhan, Kees Jan Roodbergen, and Leandro C. Coelho (2020). Asymmetric multi-depot routing problems: valid inequalities and a branch-and-cut algorithm. Operations Research.
 
-For further details we refer to our Github wiki page: https://github.com/michieluithetbroek/A-MDVRP/wiki.
+For further details we refer to our Github wiki page: https://github.com/michieluithetbroek/A-MDVRP/wiki. 
