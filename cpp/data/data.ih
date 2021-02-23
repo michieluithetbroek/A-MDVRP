@@ -1,0 +1,13 @@
+#include "data.h"
+
+#include "./../global.h"
+#include "./../random2/random2.h"
+
+#include <iostream>
+#include <fstream>
+#include <istream>
+#include <iomanip>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <random>

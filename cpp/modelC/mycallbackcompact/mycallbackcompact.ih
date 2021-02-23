@@ -1,0 +1,14 @@
+#include "mycallbackcompact.h"
+
+#include "gurobi_c++.h"
+#include "./../../global.h"
+
+#include <iostream>
+#include <iomanip>
+#include <unordered_set>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <numeric>
+#include <cmath>
+

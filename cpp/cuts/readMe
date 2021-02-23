@@ -1,0 +1,13 @@
+Each cut should be implemented in a separate class that uses public
+inheritance from the Cut base class. Each cut returns a vector with
+CutReturn structs (see cut.h for the struct).
+
+Do not forget to add the header file of a new cut in the file 'allCuts.h'
+
+The cut objects themselves are independent of the solver (e.g., CPLEX or Gurobi)
+that is used. The Cut base class transforms the vector<CutReturn> that is
+returned by any cut into a vector of CPLEX expressions. If you want to use
+another solver (say Gurobi), you only have to add a function 'create_gurobiConstraint.cc'
+to the Cut base class. Then you call this function in Cut::getCuts().
+
+The minimum code that every cut requires is provided in the folder 'Cut_example'

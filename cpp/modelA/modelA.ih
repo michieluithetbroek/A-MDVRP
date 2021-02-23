@@ -1,0 +1,15 @@
+#include "modelA.h"
+
+// #include "./../main.ih"
+#include "./../global.h"
+
+#include "./../graphFunctions/graphFunctions.h"
+
+#include <iostream>
+#include <iomanip>
+#include <unordered_set>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <numeric>
+#include <cmath>

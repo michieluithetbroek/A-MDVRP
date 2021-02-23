@@ -1,0 +1,65 @@
+# This file contains the names of all subdirectories containing sources to
+# compile. Each directory should be specified on a line of its own. Initial
+# blanks are ok. Compilation is 1-level deep. 
+
+# If a parser or scanner is used, (see icmconfig's USE_PARSER and USE_SCANNER
+# defines) then those directories are automatically included (although they
+# could be included here as well) 
+
+# Lines starting with # or with // are ignored, as are empty lines.
+
+# sources in the current (i.e., this) directory are also compiled.
+
+# If a class Y depends on class X as in:
+#   class Y: public X
+# or:
+#   class Y 
+#   { 
+#       X d_y; 
+#   };
+# then specify the dependency here using the form
+#   y   x
+# where x and y are the directories holding the resp. class sources. Multiple
+#   dependencies are OK. Then, when altering X's data organization, do 'touch
+#   x/a', followed by 'icmbuild program': x's sources as well as the sources in 
+#   directories (in)directly depending on x (e.g., y) are then automatically 
+#   recompiled by icmbuild.
+
+functions/createInstances
+functions/helpers
+functions/processOutputFiles
+functions/run
+functions
+
+graphFunctions
+
+data
+datagen
+
+random2
+
+modelC
+modelC/print
+modelC/mycallbackcompact
+
+modelA
+modelA/print
+
+cuts
+cuts/DK_plus
+cuts/DK_min
+cuts/DK_depot_plus
+cuts/DK_depot_min
+cuts/DK_length_plus
+cuts/DK_length_min
+cuts/Cut_cap
+cuts/Cut_cat
+cuts/Cut_comb
+cuts/laporte
+cuts/laporte_single_customer
+cuts/Cut_framed_cap
+cuts/Cut_gen_large_multistar
+cuts/Cut_hom_multistar
+cuts/Cut_hypotour
+cuts/Cut_Tcomb
+cuts/Cut_T1comb

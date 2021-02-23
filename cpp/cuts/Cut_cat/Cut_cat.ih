@@ -1,0 +1,6 @@
+#include "Cut_cat.h"
+
+#include "./../cut.ih"
+
+using namespace std;
+using namespace lemon;

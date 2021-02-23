@@ -1,0 +1,17 @@
+#pragma once
+
+/*
+ * This internal header file is also internally included
+ * by all derived Cut classes. We decided to do so since
+ * most of them require the same includes (e.g., graphFunctions).
+ */
+
+#include "./cut.h"
+
+#include "./../random2/random2.h"
+#include "./../graphFunctions/graphFunctions.h"
+
+#include <cvrpsep.h>
+#include <algorithm>
+
+using namespace std;

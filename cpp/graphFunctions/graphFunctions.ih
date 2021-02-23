@@ -1,0 +1,6 @@
+#include "graphFunctions.h"
+
+#include <INCLUDE/cut.h>
+
+using namespace std;
+using namespace lemon;

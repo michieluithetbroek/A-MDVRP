@@ -1,0 +1,16 @@
+The functions in this folder are the only functions that process the output files.
+The data is stored in mdvrp/analysis_new/tuning
+
+Reading the data files is handled by the following structs:
+ - resultSingleFile.h
+ - resultMergedSetting.h
+ 
+The former is the only function/file that reads input files. Thus, if the template
+of these data files changes, then this is the only function that should be changed
+accordingly.
+
+The second struct uses the first struct to read all instances of a specific problem
+type. It translates the results into some statistics (e.g., number of instances 
+solved to optimality). 
+
+The formatting of the data (i.e., printing TeX output) is handled by the cc files.

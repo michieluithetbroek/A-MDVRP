@@ -1,0 +1,80 @@
+#include "random2/random2.h"
+#include "datagen/datagen.h"
+#include "data/data.h"
+#include "global.h"
+
+#include "cuts/cut.h"
+#include "modelC/modelC.h"
+#include "modelA/modelA.h"
+
+#include "./functions/functions.h"
+#include "./functions/createInstances/createInstances.h"
+#include "./functions/helpers/IO_helpers.h"
+#include "./functions/processOutputFiles/processOutputFiles.h"
+#include "./functions/processOutputFiles/resultMergedSetting.h"
+#include "./functions/processOutputFiles/resultSingleFile.h"
+
+#include <sstream>
+#include <iostream>
+#include <ostream>
+#include <fstream>
+#include <iomanip>
+#include <experimental/filesystem>
+#include <utility>
+
+#include <string>
+#include <ctime>
+#include <chrono>
+#include <thread>
+#include <memory>
+
+namespace Icmbuild
+{
+  extern char version[];
+  extern char years[];
+  extern char author[];
+};
+
+using namespace std;
+
+void reset_globals();
+
+void print_cut_overview (string instanceName, Data const &dat, vector<shared_ptr<Cut>> allRawCuts);
+
+
+
+vector<shared_ptr<Cut>> make_cut_vector (Data const &data, 
+                                         array<bool, 12> const &setting, 
+                                         bool s2);
+
+vector<shared_ptr<Cut>> make_cut_vector_0 (Data const &data);
+vector<shared_ptr<Cut>> make_cut_vector_1 (Data const &data);
+
+
+
+// ----------------------------------
+// --- Run a given instance       ---
+// ----------------------------------
+
+void run_single_instance_own  (int instanceType, int idx_inst, 
+                               string folder, int cutSetting);
+
+void run_single_instance (Data const &data, 
+                          string const fileName,
+                          int cutSetting);
+
+
+
+// ----------------------------------
+// --- Final analysis functions   ---
+// ----------------------------------
+
+void run_base             (int instType, int idx_inst, int cutPass, int n1, int n2);
+void run_base_plusCuts    (int instType, int idx_inst, int cutPass, int n1, int n2);
+void run_base_plusGurobi  (int instType, int idx_inst, int cutPass, int n1, int n2);
+void run_base_plusBoth    (int instType, int idx_inst, int cutPass, int n1, int n2);
+
+void run_benchmark_santos (int idx_instance, bool deterministic, int rep);
+
+void run_roots (int cutPass, bool withCplexCuts, bool withGurobi);
+
